@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORE | High-Intensity VR & AR Simulations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #eaeaea;
+    scroll-behavior: smooth;
+    background-color: #101010;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+header.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.85)),
+                url('img/premium_photo-1681010317761-d0c42fdea9c0.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+header.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+header.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Call-to-action Button */
+.cta-button {
+    background-color: #005f73;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #0a9396;
+    transform: translateY(-2px);
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #333;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #0a9396;
+}
+
+
+/* Section Styling */
+.section {
+    padding: 3rem 1rem;
+    background: #181818;
+    margin-top: 1rem;
+    border-radius: 8px;
+    color: #eaeaea;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0a9396;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: #cccccc;
+}
+
+ul, ol {
+    text-align: left;
+    margin: 1rem auto;
+    max-width: 600px;
+    padding-left: 1.5rem;
+    color: #bbbbbb;
+}
+
+/* Growth Grid */
+.growth-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.growth-item {
+    background: #252525;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    border: 1px solid #0a9396;
+}
+
+.growth-item h3 {
+    color: #0a9396;
+    margin-bottom: 1rem;
+}
+
+.growth-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.growth-item li {
+    margin: 0.5rem 0;
+}
+
+/* Footer */
+.footer {
+    background: #202020;
+    text-align: center;
+    padding: 1rem 0;
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+/* Utility Classes */
+.hidden {
+    opacity: 0; /* Hidden by default */
+    transform: translateY(50px); /* Start position */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth animation */
+}
+
+.reveal {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+
+    </style>
+
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay">
+
+            <h1>NORE</h1>
+            <p>Immersive Simulations for High-Intensity Scenarios</p>
+            <a href="#about" class="cta-button">Learn More</a>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#what-we-do">What We Do</a></li>
+            <li><a href="#how-we-do-it">How We Do It</a></li>
+            <li><a href="#who-we-help">Who We Help</a></li>
+            <li><a href="#our-growth">Our Growth</a></li>
+          <li><a href="#real-world-examples">Real-World Examples</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="about" class="section hidden">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>
+                    NORE is at the forefront of cutting-edge technology, delivering Virtual Reality (VR) and Augmented Reality (AR) solutions
+                    to help organizations prepare for critical, high-pressure scenarios. Our mission is to revolutionize training by making it
+                    safer, more effective, and highly engaging.
+                </p>
+
+            </div>
+        </section>
+
+        <section id="what-we-do" class="section hidden">
+            <div class="container">
+                <h2>What We Do</h2>
+                <p>
+                    At NORE, we design custom simulations that replicate real-world situations with remarkable detail. Our services include:
+                </p>
+                <ul>
+                    <li>Nuclear plant emergency simulations</li>
+                    <li>Airport security and in-flight emergency training</li>
+                    <li>School intruder preparedness</li>
+                    <li>Emergency response and disaster management</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="how-we-do-it" class="section hidden">
+            <div class="container">
+                <h2>How We Do It</h2>
+                <p>
+                    NORE combines advanced VR and AR hardware with sophisticated software to create seamless, immersive experiences. Our process includes:
+                </p>
+                <ol>
+                    <li>Collaborating with industry experts to understand unique challenges.</li>
+                    <li>Designing realistic scenarios tailored to your organization.</li>
+                    <li>Integrating AI-driven dynamic responses to enhance training realism.</li>
+                    <li>Providing ongoing support and updates for your simulations.</li>
+                </ol>
+
+            </div>
+        </section>
+
+        <section id="who-we-help" class="section hidden">
+            <div class="container">
+                <h2>Who We Help</h2>
+                <p>
+                    NORE works with a diverse range of industries and organizations, including:
+                </p>
+                <ul>
+                    <li><strong>Nuclear Power Plants:</strong> Preparing for critical, high-risk situations.</li>
+                    <li><strong>Airport Security Teams:</strong> Simulating real-time threats and responses.</li>
+                    <li><strong>Schools:</strong> Training staff and students for intruder and emergency scenarios.</li>
+                    <li><strong>Emergency Responders:</strong> Enhancing decision-making and readiness for disasters.</li>
+                </ul>
+            </div>
+        </section>
+
+      <section id="real-world-examples" class="section hidden">
+    <div class="container">
+        <h2>Real-World Examples</h2>
+        <p>
+            The effectiveness of VR technology in training is proven by its adoption by leading companies across various industries:
+        </p>
+        <div class="examples-grid">
+            <div class="example-item">
+                <h3>Delta Air Lines</h3>
+                <p>
+                    Uses VR to train flight attendants in handling in-flight emergencies, including evacuations and passenger safety.
+                </p>
+            </div>
+            <div class="example-item">
+                <h3>Johnson & Johnson</h3>
+                <p>
+                    Trains surgeons with VR simulations to enhance precision and improve surgical outcomes while reducing costs.
+                </p>
+            </div>
+            <div class="example-item">
+                <h3>Varjo & Boeing</h3>
+                <p>
+                    Collaborated to develop VR-based astronaut training for the International Space Station (ISS), simulating zero-gravity environments.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="our-growth" class="section hidden">
+    <div class="container">
+        <h2>Our Growth</h2>
+        <p>Our performance numbers demonstrate the steady growth and success of NORE as a startup:</p>
+        <div class="growth-grid">
+            <div class="growth-item">
+                <h3>Year 1 (2024)</h3>
+                <ul>
+                    <li><strong>Revenue:</strong> $50,000</li>
+                    <li><strong>Costs:</strong> $40,000</li>
+                    <li><strong>Profit:</strong> $10,000</li>
+                    <li><strong>Clients:</strong> 3</li>
+                </ul>
+            </div>
+            <div class="growth-item">
+                <h3>Year 2 (2025, Projected)</h3>
+                <ul>
+                    <li><strong>Revenue:</strong> $150,000</li>
+                    <li><strong>Costs:</strong> $100,000</li>
+                    <li><strong>Profit:</strong> $50,000</li>
+                    <li><strong>Clients:</strong> 8–12</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 NORE. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      // script.js
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all elements with the "hidden" class
+    const sections = document.querySelectorAll(".hidden");
+
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+
+        sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+
+            if (sectionTop < triggerBottom) {
+                section.classList.add("reveal");
+            }
+        });
+    };
+
+    // Trigger on scroll and initial load
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+});
+
+    </script>
+</body>
+</html>
