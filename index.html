@@ -174,6 +174,53 @@ ul, ol {
     transform: translateY(0); /* Reset position */
 }
 
+/* Benefits Section Grid Layout */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-item {
+    background: #252525;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #0a9396;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item h3 {
+    color: #0a9396;
+    margin-bottom: 1rem;
+}
+
+.benefit-item p {
+    color: #cccccc;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px); /* Add a hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.statistics {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: #eaeaea;
+    text-align: center;
+}
+
+.statistics p strong {
+    color: #0a9396;
+    font-size: 1.3rem;
+}
+
+
+
+
+
     </style>
 
 </head>
@@ -228,6 +275,20 @@ ul, ol {
             </div>
         </section>
 
+      <section id="demo-video" class="section hidden">
+    <div class="container">
+        <h2>Our Demo Video</h2>
+        <p>Experience a brief demo of our cutting-edge VR & AR simulations in action.</p>
+        <video muted playsinline id="demoVideo" controls width="100%">
+            <source src="demo-video.mp4" type="video/mp4">
+            Your browser does not support HTML video. Please update to a modern browser.
+        </video>
+    </div>
+</section>
+
+
+
+
         <section id="how-we-do-it" class="section hidden">
             <div class="container">
                 <h2>How We Do It</h2>
@@ -243,6 +304,49 @@ ul, ol {
 
             </div>
         </section>
+
+<section id="benefits" class="section hidden">
+    <div class="container">
+        <h2>Benefits of VR Training</h2>
+        <p>VR training offers remarkable advantages, making it safer, more effective, and engaging for employees.</p>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h3>Simulate Realistic Environments</h3>
+                <p>
+                    Create training environments that are immersive and practical, ensuring lessons are safer, more effective, and better for employee retention.
+                </p>
+            </div>
+            <div class="benefit-item">
+                <h3>Reduce Risk</h3>
+                <p>
+                    From surgery to firefighting to pilot training, simulate high-risk scenarios in a controlled, low-risk environment.
+                </p>
+            </div>
+            <div class="benefit-item">
+                <h3>Increase Engagement</h3>
+                <p>
+                    VR eliminates distractions by immersing users completely in the content, helping them stay super engaged with the learning process.
+                </p>
+            </div>
+            <div class="benefit-item">
+                <h3>Learn Faster</h3>
+                <p>
+                    Emotional connections created by VR enhance memory retention, making learning not just realistic but also unforgettable.
+                </p>
+            </div>
+        </div>
+        <div class="statistics">
+            <p>
+                <strong>233%</strong> higher scores: Surgeons trained in VR at Johnson & Johnson achieved 233% better outcomes compared to passive learning tools.
+            </p>
+            <p>
+                <strong>63%</strong> of VR learners absorb information faster, and <strong>59%</strong> complete hard skills training more efficiently than traditional e-learners.
+            </p>
+        </div>
+    </div>
+</section>
+
+
 
         <section id="who-we-help" class="section hidden">
             <div class="container">
@@ -325,12 +429,10 @@ ul, ol {
     <footer class="footer">
         <p>© 2024 NORE. All Rights Reserved.</p>
     </footer>
-
-    <script>
-      // script.js
-document.addEventListener("DOMContentLoaded", () => {
-    // Select all elements with the "hidden" class
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll(".hidden");
+    const demoVideo = document.getElementById("demoVideo");
 
     const revealOnScroll = () => {
         const triggerBottom = window.innerHeight * 0.85;
@@ -344,11 +446,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
+    const playVideoOnScroll = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                demoVideo.play();
+            } else {
+                demoVideo.pause();
+            }
+        });
+    };
+
+    // Observer for the video
+    const observer = new IntersectionObserver(playVideoOnScroll, {
+        threshold: 0.5,
+    });
+
+    if (demoVideo) {
+        observer.observe(demoVideo);
+    }
+
     // Trigger on scroll and initial load
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll();
 });
 
-    </script>
+</script>
+
 </body>
 </html>
